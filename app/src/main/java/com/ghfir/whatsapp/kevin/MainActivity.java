@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -87,6 +88,9 @@ public class MainActivity extends AppCompatActivity implements ImageAnalysis.Ana
             objectDetector = ObjectDetector.createFromFileAndOptions(this, "model.tflite", options);
         } catch (IOException e) {
             Log.e(TAG, "Error initializing object detector.", e);
+            runOnUiThread(() -> {
+                Toast.makeText(this, "Model tidak ditemukan. Pastikan model.tflite ada di folder assets.", Toast.LENGTH_LONG).show();
+            });
         }
     }
 

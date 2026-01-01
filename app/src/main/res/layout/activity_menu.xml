@@ -7,46 +7,58 @@
     android:padding="16dp"
     tools:context=".MenuActivity">
 
+    <ImageView
+        android:id="@+id/egg_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_egg_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
     <TextView
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deteksi Embrio Telur"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        app:layout_constraintTop_toBottomOf="@+id/egg_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="64dp"/>
+        android:layout_marginTop="24dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/title_text"
         app:layout_constraintBottom_toTopOf="@+id/footer_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/start_detection_button"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:text="Mulai Deteksi"
             app:icon="@android:drawable/ic_menu_camera"
             android:paddingTop="16dp"
-            android:paddingBottom="16dp" />
+            android:paddingBottom="16dp"
+            app:iconGravity="textStart"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/instructions_button"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="Petunjuk"
             app:icon="@android:drawable/ic_menu_info_details"
             android:paddingTop="16dp"
-            android:paddingBottom="16dp" />
+            android:paddingBottom="16dp"
+            app:iconGravity="textStart"/>
 
     </LinearLayout>
 

@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.ghfir.whatsapp.kevin"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.ghfir.whatsapp.kevin"
-        minSdk = 27
-        targetSdk = 34
+        minSdk = 24
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -46,6 +46,7 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:1.5.2")
     implementation("androidx.camera:camera-view:1.5.2")
     implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
+    implementation("androidx.core:core-splashscreen:1.2.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
